@@ -5,6 +5,11 @@ const Article = ({ title, text, tags, image, alt }) => {
       <h3 className="text-xl text-alura-200 font-bold text-center dark:text-gray-400">
         {title}
       </h3>
+      <div className="w-full justify-end gap-2 hidden sm:flex ">
+        {tags.map((tag) => (
+          <span key={tag} className="bg-alura-100 dark:bg-dark-100 px-4 py-1 rounded-full text-gray-200 font-bold text-xs uppercase">{tag}</span>
+        ))}
+      </div>
       <div className="grid gap-1">
         {text.map((content, index) => (
           <p
@@ -22,4 +27,5 @@ const Article = ({ title, text, tags, image, alt }) => {
     </div>
   );
 };
+
 export default Article;
