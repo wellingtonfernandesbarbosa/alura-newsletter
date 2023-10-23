@@ -12,9 +12,9 @@ export default function Form({ onSubmit }) {
 
   return (
     <form onSubmit={safeSubmit} className="flex flex-col gap-10 justify-center items-center h-full -mt-20 mx-5">
-      <Input type="text" placeholder="Insira seu nome..." />
-      <Input type="email" placeholder="Insira seu email..." />
-      <button type="submit" className="w-full max-w-sm bg-alura-100 dark:bg-dark-200 rounded-full text-gray-200 py-1 px-5 uppercase outline-none">Enviar</button>
+      <Input type="text" placeholder="Insira seu nome..." required/>
+      <Input type="email" placeholder="Insira seu email..." required/>
+      <button type="submit" className="w-full max-w-sm bg-alura-100 dark:bg-dark-200 rounded-full text-gray-200 py-1 px-5 uppercase outline-none hover:animate-pulse hover:shadow-md hover:shadow-gray-500 dark:hover:shadow-black">Enviar</button>
     </form>
   );
 }
